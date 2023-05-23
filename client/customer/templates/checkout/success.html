@@ -1,0 +1,10 @@
+
+
+{% block content %}
+<h1>Thank You!</h1>
+<p>Your payment was successful.</p>
+<form action="{% url 'view_invoice'  invoice_id=invoice_id %}" method="get">
+    <input type="hidden" name="invoice_id" value="{{ invoice.id }}">
+    <button type="submit">View Invoice</button>
+</form>
+{% endblock %}
